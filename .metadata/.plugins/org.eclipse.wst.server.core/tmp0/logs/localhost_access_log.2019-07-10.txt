@@ -1,0 +1,17 @@
+127.0.0.1 - - [10/Jul/2019:16:35:05 +0900] "GET / HTTP/1.1" 404 1115
+0:0:0:0:0:0:0:1 - - [10/Jul/2019:16:35:06 +0900] "GET /shop5/ HTTP/1.1" 200 57
+0:0:0:0:0:0:0:1 - - [10/Jul/2019:16:35:06 +0900] "GET /favicon.ico HTTP/1.1" 404 1126
+0:0:0:0:0:0:0:1 - - [10/Jul/2019:16:35:10 +0900] "GET /shop5/user/login.shop HTTP/1.1" 200 1774
+0:0:0:0:0:0:0:1 - - [10/Jul/2019:16:35:10 +0900] "GET /shop5/css/main.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [10/Jul/2019:16:35:14 +0900] "POST /shop5/user/login.shop HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Jul/2019:16:35:14 +0900] "GET /shop5/user/main.shop HTTP/1.1" 200 1138
+0:0:0:0:0:0:0:1 - - [10/Jul/2019:16:35:18 +0900] "GET /shop5/item/list.shop HTTP/1.1" 200 2996
+0:0:0:0:0:0:0:1 - - [10/Jul/2019:16:35:20 +0900] "GET /shop5/item/detail.shop?id=1 HTTP/1.1" 200 2154
+0:0:0:0:0:0:0:1 - - [10/Jul/2019:16:35:20 +0900] "GET /shop5/item/img/lemon.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [10/Jul/2019:16:35:22 +0900] "GET /shop5/board/list.shop HTTP/1.1" 200 5155
+0:0:0:0:0:0:0:1 - - [10/Jul/2019:16:35:29 +0900] "GET /shop5/user/mypage.shop?id=admin HTTP/1.1" 200 4025
+0:0:0:0:0:0:0:1 - - [10/Jul/2019:16:35:32 +0900] "GET /shop5/admin/list.shop HTTP/1.1" 200 2720
+0:0:0:0:0:0:0:1 - - [10/Jul/2019:16:35:34 +0900] "GET /shop5/admin/graph1.shop HTTP/1.1" 200 1601
+0:0:0:0:0:0:0:1 - - [10/Jul/2019:16:35:40 +0900] "GET /shop5/admin/graph2.shop HTTP/1.1" 200 1383
+0:0:0:0:0:0:0:1 - - [10/Jul/2019:16:35:40 +0900] "GET /shop5/js/jquery.awesomeCloud-0.2.js HTTP/1.1" 200 35083
+0:0:0:0:0:0:0:1 - - [10/Jul/2019:16:35:46 +0900] "GET /shop5/admin/graph1.shop HTTP/1.1" 200 1601

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd"> <!-- .xsd (스키마 파일) :  XML의 표현 방식을 지정할 때 사용하는 언어이다  -->
+	<bean id="project" class="chap3.Project"> <!--  di 부분 -->
+	<!-- setSrcdirs(List<String>) 호출 -->
+		<property name="srcdirs">
+		<list><!-- src/, srcResources/ 2개 -->
+		<value>src/</value>
+		<value>srcResources/</value>
+		</list>
+		</property>
+		<!-- setBindir(String) 호출-->
+		<property name="bindir" value="bin" />
+		<!-- setClasspath(String) 호출-->
+		<property name="classpath" value="src/" />
+		<!-- setBuild(BuildRunner) 호출-->
+		<property name="build"><ref bean="runner" /></property>
+		</bean>
+		<bean id ="runner" class="chap3.BuildRunner">
+		<property name="path" value="c:/setup/" />
+		</bean>
+		<bean id ="write" class="chap3.WriteImpl">
+			<constructor-arg><ref bean="articleDao"/></constructor-arg> <!-- constructor-arg : 생성자의 매개변수 -->
+		</bean>
+		<bean id="articleDao" class="chap3.MariaDBArticleDao"/>
+</beans>
+<!-- xmlns(name space) : 같은 이름의 엘리먼트와 속성이 문서에서 서로 충돌 일으키지 않도록 이름을 구별하는 표준 규약  -->

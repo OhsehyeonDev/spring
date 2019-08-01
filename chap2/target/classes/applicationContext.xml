@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd"> <!-- .xsd (스키마 파일) :  XML 스키마의 표현 방식을 지정할 때 사용하는 언어  -->
+	<bean id="greeter" class="chap2.Greeter"> <!--  greeter 라는 이름의 객체(bean) 생성 -->
+		<property name="format" value="안녕하세요, %s"></property><!-- property(속성)는 setFormat 생성하는 명령어. -->
+		</bean>
+	<bean id="message" class="chap2.MessageEn" /><!-- property 사용 안할 때 표현방식  -->
+</beans>
+<!-- xmlns(name space) : 같은 이름의 엘리먼트와 속성이 문서에서 서로 충돌 일으키지 않도록 이름을 구별하는 표준 규약  -->

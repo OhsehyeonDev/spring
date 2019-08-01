@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Mon Jul 29 16:23:50 KST 2019
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\gd_4\\.m2\\repository\\org\\springframework\\spring-web\\5.0.4.RELEASE\\spring-web-5.0.4.RELEASE.jar=WEB-INF/lib/spring-web-5.0.4.RELEASE.jar
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\gd_4\\.m2\\repository\\org\\springframework\\spring-web\\4.3.24.RELEASE\\spring-web-4.3.24.RELEASE.jar=WEB-INF/lib/spring-web-4.3.24.RELEASE.jar

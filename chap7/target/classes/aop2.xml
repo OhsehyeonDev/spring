@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd">
+	<bean id="loggingAdvice" class="xml.LoggingAdvice" /> 
+	<bean id="cacheAdvice" class="xml.ArticlecacheAdvice" />
+	<bean id="traceAdvice" class="xml.UpdateMemberInfoTraceAdvice" />
+	
+	<aop:config>
+	<!-- AOP 클래스 설정 : loggingAdvice 를 loggingAspect 이라는 이름으로 -->
+	<!-- order : AOP 클래스가 한 번에 여러개 있을 때 순서 지정 -->
+	<aop:aspect id="loggingAspect" ref="loggingAdvice" order="3"> 
+	<!-- 핵심 기능 설정 : xml 패키지에 있는 모든 클래스의 public 메서드 설정 -->
+	<aop:pointcut id="publicMethod" expression="execution(public * xml..*(..))"/>
+	<!-- Advice 설정 시작 -->
+	<aop:before method="before" pointcut-ref="publicMethod"/>
+	<!-- method="before" : pointcut에 설정된 메서드 실행 전에  loggingAdvice 객체의 before 메서드 호출 -->
+	<aop:after-returning method="afterReturning" pointcut-ref="publicMethod" returning="ret"/>
+	<aop:after-throwing method="afterThrowing" pointcut-ref="publicMethod" throwing="ex"/>
+	<aop:after method="afterFinally" pointcut-ref="publicMethod"/>
+	<!-- Advice 설정 종료 -->
+	</aop:aspect>
+	
+	<aop:aspect id="cacheAspect" ref="cacheAdvice" order="2">
+	<!-- Advice 설정 -->
+	<aop:around method="cache" pointcut="execution(public * *..ReadArticleServiceImpl.*(..))"/>
+	</aop:aspect>
+	
+	<aop:aspect id="TraceAdvice" ref="traceAdvice" order="1">
+	<aop:after-returning method="traceReturn" pointcut="args(id,info)" returning="ret" arg-names="ret,id,info"/>
+	<!-- ret : 결과값, id,info : Main2의 매개변수 값 ex. "hong2","test"  -->
+	</aop:aspect>
+	</aop:config>
+</beans>

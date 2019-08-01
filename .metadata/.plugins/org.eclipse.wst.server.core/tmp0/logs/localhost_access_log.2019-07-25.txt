@@ -1,0 +1,17 @@
+127.0.0.1 - - [25/Jul/2019:10:16:57 +0900] "GET / HTTP/1.1" 404 1115
+0:0:0:0:0:0:0:1 - - [25/Jul/2019:10:16:58 +0900] "GET /shop5/ HTTP/1.1" 200 57
+0:0:0:0:0:0:0:1 - - [25/Jul/2019:10:17:01 +0900] "GET /shop5/user/login.shop HTTP/1.1" 200 1774
+0:0:0:0:0:0:0:1 - - [25/Jul/2019:10:17:07 +0900] "POST /shop5/user/login.shop HTTP/1.1" 200 1869
+0:0:0:0:0:0:0:1 - - [25/Jul/2019:10:17:10 +0900] "POST /shop5/user/login.shop HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [25/Jul/2019:10:17:10 +0900] "GET /shop5/user/main.shop HTTP/1.1" 200 1140
+0:0:0:0:0:0:0:1 - - [25/Jul/2019:10:17:11 +0900] "GET /shop5/user/mypage.shop?id=test1 HTTP/1.1" 200 4143
+0:0:0:0:0:0:0:1 - - [25/Jul/2019:10:17:14 +0900] "GET /shop5/user/update.shop?id=test1 HTTP/1.1" 200 2579
+0:0:0:0:0:0:0:1 - - [25/Jul/2019:10:17:31 +0900] "GET /shop5/user/update.shop?id=test1 HTTP/1.1" 200 2579
+0:0:0:0:0:0:0:1 - - [25/Jul/2019:10:18:39 +0900] "GET /shop5/item/list.shop HTTP/1.1" 200 2997
+0:0:0:0:0:0:0:1 - - [25/Jul/2019:10:18:40 +0900] "GET /shop5/item/detail.shop?id=1 HTTP/1.1" 200 2155
+0:0:0:0:0:0:0:1 - - [25/Jul/2019:10:18:42 +0900] "GET /shop5/item/list.shop HTTP/1.1" 200 2997
+0:0:0:0:0:0:0:1 - - [25/Jul/2019:10:18:44 +0900] "GET /shop5/board/list.shop HTTP/1.1" 200 5135
+0:0:0:0:0:0:0:1 - - [25/Jul/2019:10:18:45 +0900] "GET /shop5/board/detail.shop?num=42 HTTP/1.1" 200 1682
+0:0:0:0:0:0:0:1 - - [25/Jul/2019:10:18:47 +0900] "GET /shop5/board/update.shop?num=42 HTTP/1.1" 200 2351
+0:0:0:0:0:0:0:1 - - [25/Jul/2019:10:19:03 +0900] "GET /shop5/board/list.shop HTTP/1.1" 200 5135
+0:0:0:0:0:0:0:1 - - [25/Jul/2019:10:19:04 +0900] "GET /shop5/board/detail.shop?num=42 HTTP/1.1" 200 1682
